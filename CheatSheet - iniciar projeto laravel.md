@@ -45,7 +45,7 @@ de seguida podemos fazer CD para o projeto ou abrir a pasta no terminal no IDE
 
 ``npm install; npm run dev``  (windows)
 
-``npm install``
+``npm install``\
 ``npm run dev``
     
 >podemos correr os dois em separado para evitar erros
@@ -66,6 +66,7 @@ ou estejamos a utilizar no phpmyadmin
 
 >nome do user que tem acesso a BD
 default é root
+
 ``DB_PASSWORD=root`` alterar para ``DB_PASSWORD=``
 
 >e password do mesmo
