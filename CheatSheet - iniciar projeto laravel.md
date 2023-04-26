@@ -88,7 +88,7 @@ Passa a estrutura das tabelas para o phpmyadmin
 ``php artisan serve``
 
 # PASSOS:
-- [ ] Instalar Laravel na Pasta
+- [ ] Instalar Laravel
 - [ ] Iniciar um Projeto dentro da Pasta
 - [ ] Instalar Autenticação e Boostrap
 - [ ] Instalar npm e dar run
