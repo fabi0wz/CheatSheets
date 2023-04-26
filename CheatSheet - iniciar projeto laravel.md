@@ -19,7 +19,7 @@ Comandos: \
 
 
 
-# Comandos para Laravel:
+# Comandos para iniciar um projeto Laravel:
 ## 1 - Instalação: (EXECUTAR NO CMD)
 
 ``composer global require laravel/installer``
@@ -95,3 +95,92 @@ Passa a estrutura das tabelas para o phpmyadmin
 - [ ] Editar ficheiro .env (acesso BD)
 - [ ] Migrar BD para phpMyAdmin
 - [ ] Iniciar/Reiniciar Web Server
+
+# Coomeçar trocar nomeasdasd
+
+## 1 - Criar controlador
+`php artisan make:controller HelloWorldController`
+
+>HelloWorldController é o nome do controlador que criamos
+
+Verificar: **Dentro do projeto:** app\Http\Controllers
+
+## 2 - Dentro do controlador adicionar nossos metodos
+
+criamos variavel com um texto e enviamos para o controlador
+
+```
+public function index()
+    {
+        $helloWorld = 'Hello World!';
+        return view('hello_world.index', ['helloWorld' => $helloWorld]);
+    }
+```
+
+podemos retornar varias variaveis ao html
+
+```
+public function index()
+    {
+        $helloWorld = 'Hello World!';
+        return view('hello_world.index',
+            [
+                'helloWorld' => $helloWorld,
+                'h2' => 'Isto está no h2!',
+                'h3' => 'Isto está no h3!',
+                'h4' => 'Isto está no h4!'
+            ]
+        );
+    }
+```
+
+## 3 - Criar ficheiro index
+
+ir a resources\views e adicionar o ficheiro ``index.blade.php``
+
+dentro do ficheiro
+
+`<h1>{{ $helloWorld }}</h1>`
+
+    <h1>{{ $helloWorld }}</h1>
+    
+    *same as*
+
+    <h1>
+        <?php echo $helloWorld?>
+    </h1>
+
+    {{ $variavel }} é o equivalente a fazer echo de uma variavel
+
+
+## 4 - Registar uma Rota
+
+``Route::get('/hello-world', 'HelloWorldController@index');``
+
+>primeiro parametro é o nome da rota\
+>
+>---
+>segundo parametro é o nome do controller e o metodo que vai ser executado\
+>
+>---
+>@separa o parametro do metodo
+
+
+
+
+
+
+# Paths nos projetos
+- Controllers -> ``\app\Http\Controllers``
+- Views -> ``\resources\views``
+- Routes -> ``\routes\web.php``
+
+**tree view**
+
+    ├── app
+    │   └── Http
+    │       └── Controllers
+    ├── Resources
+    │   └── Views
+    ├── routes
+    │   └── web.php
