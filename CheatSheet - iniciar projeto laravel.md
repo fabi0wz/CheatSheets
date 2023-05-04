@@ -116,6 +116,7 @@ public function index()
         return view('hello_world.index', ['helloWorld' => $helloWorld]);
     }
 ```
+>hello_world.index -> hello_world é o nome da pasta . (concatenar) index, por exemplo se estivesse na raiz era so 'index'
 
 podemos retornar varias variaveis ao html
 
@@ -155,6 +156,8 @@ dentro do ficheiro
 
 ## 4 - Registar uma Rota
 
+No web.php (ficheiro das rotas):
+
 ``Route::get('/hello-world', 'HelloWorldController@index');``
 
 >primeiro parametro é o nome da rota\
@@ -184,3 +187,96 @@ dentro do ficheiro
     │   └── Views
     ├── routes
     │   └── web.php
+
+
+
+# Juntar HTML e importa-lo para o ficheiro main
+
+primeiro criar uma pasta master com os ficheiros:
+
+- footer.blade.php
+- header.blade.php
+- main.blade.php
+
+no header colocamos o que estará presente em todas as paginas do nosso website, por exemplo a navbar e o mesmo para o footer
+
+no main podemos colocar por exemplo
+
+```
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Project</title>
+
+
+    {{-- STYLE SECTION --}}
+    <link rel="stylesheet" href="{!! asset('css/app.css') !!}" media="all" type="text/css" />
+    @yield('styles')
+    {{-- .STYLE SECTION --}}
+</head>
+
+<body>
+
+{{-- Header --}}
+@component('master.header')
+@endcomponent
+{{-- .Header --}}
+
+{{-- Main --}}
+<main>
+    @yield('content')
+</main>
+{{-- .Main --}}
+
+
+{{-- Footer --}}
+@component('master.footer')
+@endcomponent
+{{-- .Footer --}}
+
+{{-- SCRIPTS SECTION --}}
+<script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
+@yield('scripts')
+{{-- .SCRIPTS SECTION --}}
+
+</body>
+
+</html>
+```
+
+depois podemos criar uma pasta components e la dentro por partes de codigo html que vao ser repetidos, por exemplo criamos um card no ficheiro card.blade.php e no index.blade.php só importamos assim:
+
+```
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @component('components.cards')
+                @endcomponent
+            </div>
+        </div>
+    </div>
+@stop
+```
+
+@component('nomedocomponente')\
+@endcomponent
+
+
+no ficheiro cards:
+```
+@component('components.card.card', [
+    'title'  => 'Title teste',
+    'description' => 'description',
+    'image' => 'https://imageggegem'
+])
+```
+
+
+no card, substituir texto e links por variaveis:\
+ {{$variavel}}
