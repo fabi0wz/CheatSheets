@@ -1,0 +1,5 @@
+START XAMPP:
+
+cd /opt/lampp
+
+sudo ./xampp start
