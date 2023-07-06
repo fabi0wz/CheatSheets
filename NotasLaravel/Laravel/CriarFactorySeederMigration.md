@@ -118,3 +118,10 @@ public function run()
 ```
 
 no fim é só correr o comando `php artisan migrate:fresh —seed`
+
+## Paginas
+[Pagina Inicial](../NotasLaravel.md)\
+[Criar rota, controller e views](CriarRotaControllerViews.md)\
+[My beloved Laravel cheat sheet](MyBelovedLaravelCheatSheet.md)\
+[Migrations - dump](MigrationsDump.md)
+[da goo shiiieee](dagooshiiieee.md)
