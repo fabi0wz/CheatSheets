@@ -202,9 +202,8 @@ Se por exemplo a tabela users tiver uma foreign key Country_id e quisermos consu
 vai a tabela players e ve o country id, e depois atraves desse country id vai ver o name na tabela dos countries
 
 ## Paginas
-[Pagina Inicial](../NotasLaravel.md)\
 [Iniciar novo Projeto](IniciarNovoProjeto.md)\
-[Criar rota, controller e views](CriarRotaControllerViews.md)\
+[Criar Factory, Seeder e Migration](CriarFactorySeederMigration.md)\
 [My beloved Laravel cheat sheet](MyBelovedLaravelCheatSheet.md)\
-[Migrations - dump](MigrationsDump.md)
-[da goo shiiieee](dagooshiiieee.md)
+[Migrations - dump](MigrationsDump.md)\
+[Da goo shiiieee](dagooshiiieee.md)

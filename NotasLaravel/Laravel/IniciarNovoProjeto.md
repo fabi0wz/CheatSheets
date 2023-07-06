@@ -94,9 +94,8 @@ Passa a estrutura das tabelas para o phpmyadmin (verificar no php my admin -> de
 >
 
 ## Paginas
-[Pagina Inicial](../NotasLaravel.md)\
 [Criar Factory, Seeder e Migration](CriarFactorySeederMigration.md)\
 [Criar rota, controller e views](CriarRotaControllerViews.md)\
 [My beloved Laravel cheat sheet](MyBelovedLaravelCheatSheet.md)\
-[Migrations - dump](MigrationsDump.md)
-[da goo shiiieee](dagooshiiieee.md)
+[Migrations - dump](MigrationsDump.md)\
+[Da goo shiiieee](dagooshiiieee.md)

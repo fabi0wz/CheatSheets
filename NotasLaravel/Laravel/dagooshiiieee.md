@@ -539,7 +539,7 @@ Dentro das views agora podemos utilizar as variaveis que enviamos através do co
 ```
 
 ## Paginas
-[Pagina Inicial](../NotasLaravel.md)\
+## Paginas
 [Iniciar novo Projeto](IniciarNovoProjeto.md)\
 [Criar Factory, Seeder e Migration](CriarFactorySeederMigration.md)\
 [Criar rota, controller e views](CriarRotaControllerViews.md)\

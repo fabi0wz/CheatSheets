@@ -767,9 +767,9 @@ if !auth()->user()->tokenCan('product-list') {
 
 
 ## Paginas
-[Pagina Inicial](../NotasLaravel.md)\
+## Paginas
 [Iniciar novo Projeto](IniciarNovoProjeto.md)\
 [Criar Factory, Seeder e Migration](CriarFactorySeederMigration.md)\
 [Criar rota, controller e views](CriarRotaControllerViews.md)\
-[Migrations - dump](MigrationsDump.md)
-[da goo shiiieee](dagooshiiieee.md)
+[Migrations - dump](MigrationsDump.md)\
+[Da goo shiiieee](dagooshiiieee.md)
