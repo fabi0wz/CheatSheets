@@ -51,5 +51,3 @@ verificar se estou com a versao do node correta senão fazer `nvm use 16.19.1`
 │   └── web.php
 
 ```
-
-[da goo shiiieee](Laravel/dagooshiiieee)
